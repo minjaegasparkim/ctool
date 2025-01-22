@@ -34,7 +34,7 @@ from astropy.io import fits
 #     return cont
 
 # Slight modification for CSV 
-def calc_cont(wave, flux, niter=5, boxsize=95, exclude=None, threshold=threshold_number, offset=0, spike_threshold=None):
+def calc_cont(wave, flux, niter=5, boxsize=95, exclude=None, threshold=None, offset=0, spike_threshold=None):
     # Convert pandas Series to numpy arrays if needed
     # threshold_number default is 0.998 in the original function though
     wave_arr = wave.to_numpy() if hasattr(wave, 'to_numpy') else np.array(wave)
